@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ActionCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet MDCButton *checkBtn;
+@property (strong, nonatomic)  CompletionHandler checkHandler;
 @end
 
 NS_ASSUME_NONNULL_END

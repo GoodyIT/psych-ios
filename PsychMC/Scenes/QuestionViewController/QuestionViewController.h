@@ -10,7 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface QuestionViewController : UIViewController
+@interface QuestionViewController : UITableViewController
+
+@property (strong, nonatomic) NSString* isFirstQuestion;
+@property (strong, nonatomic) Work *work;
 
 @end
 

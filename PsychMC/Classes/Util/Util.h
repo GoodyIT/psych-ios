@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Util : NSObject
 
++ (uint32_t)randomUInt32: (NSInteger) count;
+
++ (NSString*) getToday;
+
 @end
 
 NS_ASSUME_NONNULL_END

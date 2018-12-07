@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		794D3F2621B7B353008CDF7C /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D3F2521B7B353008CDF7C /* QuestionViewController.m */; };
+		794D3F2C21B7CE1B008CDF7C /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D3F2A21B7CE1B008CDF7C /* QuestionCell.m */; };
+		794D3F2D21B7CE1B008CDF7C /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F2B21B7CE1B008CDF7C /* QuestionCell.xib */; };
+		794D3F3321B7D0EC008CDF7C /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D3F3121B7D0EC008CDF7C /* CardCell.m */; };
+		794D3F3421B7D0EC008CDF7C /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F3221B7D0EC008CDF7C /* CardCell.xib */; };
+		794D3F3A21B7DE93008CDF7C /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D3F3921B7DE93008CDF7C /* Question.m */; };
+		794D3F4C21B84948008CDF7C /* ActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D3F4A21B84948008CDF7C /* ActionCell.m */; };
+		794D3F4D21B84948008CDF7C /* ActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F4B21B84948008CDF7C /* ActionCell.xib */; };
+		794D3F5121B865F6008CDF7C /* Work.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D3F5021B865F6008CDF7C /* Work.m */; };
+		794D3F5621B87A96008CDF7C /* Psych.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F5321B87A96008CDF7C /* Psych.png */; };
+		794D3F5721B87A96008CDF7C /* Psych@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F5421B87A96008CDF7C /* Psych@2x.png */; };
+		794D3F5821B87A96008CDF7C /* Psych@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F5521B87A96008CDF7C /* Psych@3x.png */; };
+		794D3F6C21B9472B008CDF7C /* psych.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F6B21B9472B008CDF7C /* psych.sqlite3 */; };
+		794D3F7021B94A83008CDF7C /* ReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D3F6F21B94A83008CDF7C /* ReviewController.m */; };
+		794D3F7421B9B2CF008CDF7C /* icon_check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F7121B9B2CE008CDF7C /* icon_check@2x.png */; };
+		794D3F7521B9B2CF008CDF7C /* icon_check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F7221B9B2CE008CDF7C /* icon_check@3x.png */; };
+		794D3F7621B9B2CF008CDF7C /* icon_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F7321B9B2CE008CDF7C /* icon_check.png */; };
+		794D3F7B21B9C83D008CDF7C /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D3F7A21B9C83D008CDF7C /* Util.m */; };
+		794D3F7D21B9CCB7008CDF7C /* GameplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794D3F7C21B9CCB7008CDF7C /* GameplayKit.framework */; };
+		794D3F8121BA5B12008CDF7C /* icon_x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F7E21BA5B11008CDF7C /* icon_x.png */; };
+		794D3F8221BA5B12008CDF7C /* icon_x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F7F21BA5B12008CDF7C /* icon_x@2x.png */; };
+		794D3F8321BA5B12008CDF7C /* icon_x@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F8021BA5B12008CDF7C /* icon_x@3x.png */; };
+		794D3F8721BA5CF3008CDF7C /* icon_check_done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F8421BA5CF3008CDF7C /* icon_check_done@2x.png */; };
+		794D3F8821BA5CF3008CDF7C /* icon_check_done@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F8521BA5CF3008CDF7C /* icon_check_done@3x.png */; };
+		794D3F8921BA5CF3008CDF7C /* icon_check_done.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F8621BA5CF3008CDF7C /* icon_check_done.png */; };
 		79D02FC021B744AD00D5017D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D02FBF21B744AD00D5017D /* AppDelegate.m */; };
 		79D02FC321B744AD00D5017D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D02FC221B744AD00D5017D /* FirstViewController.m */; };
 		79D02FC621B744AD00D5017D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D02FC521B744AD00D5017D /* SecondViewController.m */; };
@@ -14,9 +39,46 @@
 		79D02FCB21B744AE00D5017D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D02FCA21B744AE00D5017D /* Assets.xcassets */; };
 		79D02FCE21B744AE00D5017D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D02FCC21B744AE00D5017D /* LaunchScreen.storyboard */; };
 		79D02FD121B744AE00D5017D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D02FD021B744AE00D5017D /* main.m */; };
+		DC30DF78C06050C66529274D /* libPods-PsychMC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C047FD7F09350753AC35B27 /* libPods-PsychMC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C047FD7F09350753AC35B27 /* libPods-PsychMC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PsychMC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		654BA3642E35EF11DD3ECB81 /* Pods-PsychMC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PsychMC.release.xcconfig"; path = "Pods/Target Support Files/Pods-PsychMC/Pods-PsychMC.release.xcconfig"; sourceTree = "<group>"; };
+		794D3F2421B7B353008CDF7C /* QuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		794D3F2521B7B353008CDF7C /* QuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		794D3F2921B7CE1B008CDF7C /* QuestionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionCell.h; sourceTree = "<group>"; };
+		794D3F2A21B7CE1B008CDF7C /* QuestionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionCell.m; sourceTree = "<group>"; };
+		794D3F2B21B7CE1B008CDF7C /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
+		794D3F3021B7D0EC008CDF7C /* CardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
+		794D3F3121B7D0EC008CDF7C /* CardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
+		794D3F3221B7D0EC008CDF7C /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		794D3F3621B7DD7B008CDF7C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		794D3F3821B7DE93008CDF7C /* Question.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		794D3F3921B7DE93008CDF7C /* Question.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		794D3F4921B84948008CDF7C /* ActionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionCell.h; sourceTree = "<group>"; };
+		794D3F4A21B84948008CDF7C /* ActionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionCell.m; sourceTree = "<group>"; };
+		794D3F4B21B84948008CDF7C /* ActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionCell.xib; sourceTree = "<group>"; };
+		794D3F4F21B865F6008CDF7C /* Work.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Work.h; sourceTree = "<group>"; };
+		794D3F5021B865F6008CDF7C /* Work.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Work.m; sourceTree = "<group>"; };
+		794D3F5321B87A96008CDF7C /* Psych.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Psych.png; path = PsychMC/Assets.xcassets/Psych.imageset/Psych.png; sourceTree = SOURCE_ROOT; };
+		794D3F5421B87A96008CDF7C /* Psych@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Psych@2x.png"; path = "PsychMC/Assets.xcassets/Psych.imageset/Psych@2x.png"; sourceTree = SOURCE_ROOT; };
+		794D3F5521B87A96008CDF7C /* Psych@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Psych@3x.png"; path = "PsychMC/Assets.xcassets/Psych.imageset/Psych@3x.png"; sourceTree = SOURCE_ROOT; };
+		794D3F6B21B9472B008CDF7C /* psych.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = psych.sqlite3; sourceTree = "<group>"; };
+		794D3F6E21B94A83008CDF7C /* ReviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewController.h; sourceTree = "<group>"; };
+		794D3F6F21B94A83008CDF7C /* ReviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewController.m; sourceTree = "<group>"; };
+		794D3F7121B9B2CE008CDF7C /* icon_check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check@2x.png"; sourceTree = "<group>"; };
+		794D3F7221B9B2CE008CDF7C /* icon_check@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check@3x.png"; sourceTree = "<group>"; };
+		794D3F7321B9B2CE008CDF7C /* icon_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check.png; sourceTree = "<group>"; };
+		794D3F7921B9C83D008CDF7C /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		794D3F7A21B9C83D008CDF7C /* Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		794D3F7C21B9CCB7008CDF7C /* GameplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameplayKit.framework; path = System/Library/Frameworks/GameplayKit.framework; sourceTree = SDKROOT; };
+		794D3F7E21BA5B11008CDF7C /* icon_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_x.png; sourceTree = "<group>"; };
+		794D3F7F21BA5B12008CDF7C /* icon_x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_x@2x.png"; sourceTree = "<group>"; };
+		794D3F8021BA5B12008CDF7C /* icon_x@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_x@3x.png"; sourceTree = "<group>"; };
+		794D3F8421BA5CF3008CDF7C /* icon_check_done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check_done@2x.png"; sourceTree = "<group>"; };
+		794D3F8521BA5CF3008CDF7C /* icon_check_done@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check_done@3x.png"; sourceTree = "<group>"; };
+		794D3F8621BA5CF3008CDF7C /* icon_check_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_done.png; sourceTree = "<group>"; };
 		79D02FBB21B744AD00D5017D /* PsychMC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychMC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D02FBE21B744AD00D5017D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		79D02FBF21B744AD00D5017D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +91,7 @@
 		79D02FCD21B744AE00D5017D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79D02FCF21B744AE00D5017D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79D02FD021B744AE00D5017D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4754F9525F4ABD3B7508E49 /* Pods-PsychMC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PsychMC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PsychMC/Pods-PsychMC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +99,170 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794D3F7D21B9CCB7008CDF7C /* GameplayKit.framework in Frameworks */,
+				DC30DF78C06050C66529274D /* libPods-PsychMC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CB12236C6E20B2090D6347C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F7C21B9CCB7008CDF7C /* GameplayKit.framework */,
+				5C047FD7F09350753AC35B27 /* libPods-PsychMC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		794D3F2221B7B31F008CDF7C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F6D21B94A6D008CDF7C /* ReviewController */,
+				794D3F2321B7B330008CDF7C /* QuestionViewController */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		794D3F2321B7B330008CDF7C /* QuestionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F2421B7B353008CDF7C /* QuestionViewController.h */,
+				794D3F2521B7B353008CDF7C /* QuestionViewController.m */,
+			);
+			path = QuestionViewController;
+			sourceTree = "<group>";
+		};
+		794D3F2721B7CDEA008CDF7C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F4821B84933008CDF7C /* ActionCell */,
+				794D3F2F21B7D0E1008CDF7C /* CardCell */,
+				794D3F2821B7CE02008CDF7C /* QuestionCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		794D3F2821B7CE02008CDF7C /* QuestionCell */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F2921B7CE1B008CDF7C /* QuestionCell.h */,
+				794D3F2A21B7CE1B008CDF7C /* QuestionCell.m */,
+				794D3F2B21B7CE1B008CDF7C /* QuestionCell.xib */,
+			);
+			path = QuestionCell;
+			sourceTree = "<group>";
+		};
+		794D3F2F21B7D0E1008CDF7C /* CardCell */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F3021B7D0EC008CDF7C /* CardCell.h */,
+				794D3F3121B7D0EC008CDF7C /* CardCell.m */,
+				794D3F3221B7D0EC008CDF7C /* CardCell.xib */,
+			);
+			path = CardCell;
+			sourceTree = "<group>";
+		};
+		794D3F3521B7DD62008CDF7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F5B21B93297008CDF7C /* db */,
+				794D3F5221B87A7E008CDF7C /* Images */,
+				794D3F3621B7DD7B008CDF7C /* PrefixHeader.pch */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		794D3F3721B7DE3A008CDF7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F4E21B865E1008CDF7C /* Work */,
+				794D3F3821B7DE93008CDF7C /* Question.h */,
+				794D3F3921B7DE93008CDF7C /* Question.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		794D3F4821B84933008CDF7C /* ActionCell */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F4921B84948008CDF7C /* ActionCell.h */,
+				794D3F4A21B84948008CDF7C /* ActionCell.m */,
+				794D3F4B21B84948008CDF7C /* ActionCell.xib */,
+			);
+			path = ActionCell;
+			sourceTree = "<group>";
+		};
+		794D3F4E21B865E1008CDF7C /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F4F21B865F6008CDF7C /* Work.h */,
+				794D3F5021B865F6008CDF7C /* Work.m */,
+			);
+			path = Work;
+			sourceTree = "<group>";
+		};
+		794D3F5221B87A7E008CDF7C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F8621BA5CF3008CDF7C /* icon_check_done.png */,
+				794D3F8421BA5CF3008CDF7C /* icon_check_done@2x.png */,
+				794D3F8521BA5CF3008CDF7C /* icon_check_done@3x.png */,
+				794D3F7E21BA5B11008CDF7C /* icon_x.png */,
+				794D3F7F21BA5B12008CDF7C /* icon_x@2x.png */,
+				794D3F8021BA5B12008CDF7C /* icon_x@3x.png */,
+				794D3F7321B9B2CE008CDF7C /* icon_check.png */,
+				794D3F7121B9B2CE008CDF7C /* icon_check@2x.png */,
+				794D3F7221B9B2CE008CDF7C /* icon_check@3x.png */,
+				794D3F5321B87A96008CDF7C /* Psych.png */,
+				794D3F5421B87A96008CDF7C /* Psych@2x.png */,
+				794D3F5521B87A96008CDF7C /* Psych@3x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		794D3F5B21B93297008CDF7C /* db */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F6B21B9472B008CDF7C /* psych.sqlite3 */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		794D3F6D21B94A6D008CDF7C /* ReviewController */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F6E21B94A83008CDF7C /* ReviewController.h */,
+				794D3F6F21B94A83008CDF7C /* ReviewController.m */,
+			);
+			path = ReviewController;
+			sourceTree = "<group>";
+		};
+		794D3F7721B9C81D008CDF7C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F7821B9C829008CDF7C /* Util */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		794D3F7821B9C829008CDF7C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F7921B9C83D008CDF7C /* Util.h */,
+				794D3F7A21B9C83D008CDF7C /* Util.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		79D02FB221B744AD00D5017D = {
 			isa = PBXGroup;
 			children = (
 				79D02FBD21B744AD00D5017D /* PsychMC */,
 				79D02FBC21B744AD00D5017D /* Products */,
+				D25D100A98E96A301DD17086 /* Pods */,
+				4CB12236C6E20B2090D6347C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +277,11 @@
 		79D02FBD21B744AD00D5017D /* PsychMC */ = {
 			isa = PBXGroup;
 			children = (
+				794D3F7721B9C81D008CDF7C /* Classes */,
+				794D3F3721B7DE3A008CDF7C /* Model */,
+				794D3F3521B7DD62008CDF7C /* Resources */,
+				794D3F2721B7CDEA008CDF7C /* Cell */,
+				794D3F2221B7B31F008CDF7C /* Scenes */,
 				79D02FBE21B744AD00D5017D /* AppDelegate.h */,
 				79D02FBF21B744AD00D5017D /* AppDelegate.m */,
 				79D02FC121B744AD00D5017D /* FirstViewController.h */,
@@ -76,6 +297,15 @@
 			path = PsychMC;
 			sourceTree = "<group>";
 		};
+		D25D100A98E96A301DD17086 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4754F9525F4ABD3B7508E49 /* Pods-PsychMC.debug.xcconfig */,
+				654BA3642E35EF11DD3ECB81 /* Pods-PsychMC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +313,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79D02FD421B744AE00D5017D /* Build configuration list for PBXNativeTarget "PsychMC" */;
 			buildPhases = (
+				5CD6E8048C2208260042D8D0 /* [CP] Check Pods Manifest.lock */,
 				79D02FB721B744AD00D5017D /* Sources */,
 				79D02FB821B744AD00D5017D /* Frameworks */,
 				79D02FB921B744AD00D5017D /* Resources */,
+				C84DECD85A1B6B7C21B165E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,23 +365,86 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794D3F7621B9B2CF008CDF7C /* icon_check.png in Resources */,
+				794D3F8221BA5B12008CDF7C /* icon_x@2x.png in Resources */,
+				794D3F5721B87A96008CDF7C /* Psych@2x.png in Resources */,
 				79D02FCE21B744AE00D5017D /* LaunchScreen.storyboard in Resources */,
+				794D3F5821B87A96008CDF7C /* Psych@3x.png in Resources */,
+				794D3F2D21B7CE1B008CDF7C /* QuestionCell.xib in Resources */,
+				794D3F3421B7D0EC008CDF7C /* CardCell.xib in Resources */,
+				794D3F7521B9B2CF008CDF7C /* icon_check@3x.png in Resources */,
+				794D3F7421B9B2CF008CDF7C /* icon_check@2x.png in Resources */,
+				794D3F6C21B9472B008CDF7C /* psych.sqlite3 in Resources */,
+				794D3F5621B87A96008CDF7C /* Psych.png in Resources */,
+				794D3F8321BA5B12008CDF7C /* icon_x@3x.png in Resources */,
 				79D02FCB21B744AE00D5017D /* Assets.xcassets in Resources */,
 				79D02FC921B744AD00D5017D /* Main.storyboard in Resources */,
+				794D3F8921BA5CF3008CDF7C /* icon_check_done.png in Resources */,
+				794D3F4D21B84948008CDF7C /* ActionCell.xib in Resources */,
+				794D3F8821BA5CF3008CDF7C /* icon_check_done@3x.png in Resources */,
+				794D3F8721BA5CF3008CDF7C /* icon_check_done@2x.png in Resources */,
+				794D3F8121BA5B12008CDF7C /* icon_x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5CD6E8048C2208260042D8D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PsychMC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C84DECD85A1B6B7C21B165E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PsychMC/Pods-PsychMC-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_check_circle.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_check_circle.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PsychMC/Pods-PsychMC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79D02FB721B744AD00D5017D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794D3F5121B865F6008CDF7C /* Work.m in Sources */,
 				79D02FC621B744AD00D5017D /* SecondViewController.m in Sources */,
+				794D3F3321B7D0EC008CDF7C /* CardCell.m in Sources */,
+				794D3F2621B7B353008CDF7C /* QuestionViewController.m in Sources */,
+				794D3F7021B94A83008CDF7C /* ReviewController.m in Sources */,
 				79D02FC021B744AD00D5017D /* AppDelegate.m in Sources */,
+				794D3F4C21B84948008CDF7C /* ActionCell.m in Sources */,
 				79D02FD121B744AE00D5017D /* main.m in Sources */,
+				794D3F3A21B7DE93008CDF7C /* Question.m in Sources */,
 				79D02FC321B744AD00D5017D /* FirstViewController.m in Sources */,
+				794D3F2C21B7CE1B008CDF7C /* QuestionCell.m in Sources */,
+				794D3F7B21B9C83D008CDF7C /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +511,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -273,6 +569,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -289,10 +586,13 @@
 		};
 		79D02FD521B744AE00D5017D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4754F9525F4ABD3B7508E49 /* Pods-PsychMC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EGH54EC3K4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PsychMC/Resources/Prefixheader.pch";
 				INFOPLIST_FILE = PsychMC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,10 +606,13 @@
 		};
 		79D02FD621B744AE00D5017D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 654BA3642E35EF11DD3ECB81 /* Pods-PsychMC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EGH54EC3K4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PsychMC/Resources/Prefixheader.pch\n";
 				INFOPLIST_FILE = PsychMC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

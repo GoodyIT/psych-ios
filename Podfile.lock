@@ -1,0 +1,113 @@
+PODS:
+  - FCModel (0.9.0):
+    - FMDB (~> 2.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - MaterialComponents/AnimationTiming (68.2.0)
+  - MaterialComponents/Buttons (68.2.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Shapes
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - "MaterialComponents/Buttons+ButtonThemer (68.2.0)":
+    - MaterialComponents/Buttons
+    - "MaterialComponents/Buttons+ColorThemer"
+    - "MaterialComponents/Buttons+ShapeThemer"
+    - "MaterialComponents/Buttons+TypographyThemer"
+  - "MaterialComponents/Buttons+ColorThemer (68.2.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Color
+  - "MaterialComponents/Buttons+ShapeThemer (68.2.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Shape
+  - "MaterialComponents/Buttons+TypographyThemer (68.2.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Typography
+  - MaterialComponents/Cards (68.2.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Icons/ic_check_circle
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Shapes
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/Chips (68.2.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/ShapeLibrary
+    - MaterialComponents/private/Shapes
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/TextFields
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - MaterialComponents/Ink (68.2.0):
+    - MaterialComponents/private/Math
+  - MaterialComponents/Palettes (68.2.0)
+  - MaterialComponents/private/Application (68.2.0)
+  - MaterialComponents/private/Icons/Base (68.2.0)
+  - MaterialComponents/private/Icons/ic_check_circle (68.2.0):
+    - MaterialComponents/private/Icons/Base
+  - MaterialComponents/private/Math (68.2.0)
+  - MaterialComponents/private/ShapeLibrary (68.2.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Shapes
+  - MaterialComponents/private/Shapes (68.2.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/schemes/Color (68.2.0)
+  - MaterialComponents/schemes/Shape (68.2.0):
+    - MaterialComponents/private/ShapeLibrary
+    - MaterialComponents/private/Shapes
+  - MaterialComponents/schemes/Typography (68.2.0)
+  - MaterialComponents/ShadowElevations (68.2.0)
+  - MaterialComponents/ShadowLayer (68.2.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/TextFields (68.2.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - MaterialComponents/Typography (68.2.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MDFInternationalization (1.1.0)
+  - MDFTextAccessibility (1.2.0)
+  - Realm (3.11.2):
+    - Realm/Headers (= 3.11.2)
+  - Realm/Headers (3.11.2)
+
+DEPENDENCIES:
+  - FCModel
+  - FMDB
+  - MaterialComponents/Buttons
+  - "MaterialComponents/Buttons+ButtonThemer"
+  - MaterialComponents/Cards
+  - MaterialComponents/Chips
+  - MaterialComponents/ShadowElevations
+  - Realm
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FCModel
+    - FMDB
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
+    - Realm
+
+SPEC CHECKSUMS:
+  FCModel: 04bb289914e67f2275cb17fda869131a3529c1a5
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  MaterialComponents: 0a6202cdfab416518d065eaea869efea2126b605
+  MDFInternationalization: b5b8626628abf026e630e5ebaeee563037712cbb
+  MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
+  Realm: 864477d028db77f7c5a0cba64a4892ad53db128a
+
+PODFILE CHECKSUM: fb27d968afce76de61a814028dcb240c52569a9c
+
+COCOAPODS: 1.5.3

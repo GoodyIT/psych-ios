@@ -8,7 +8,7 @@
 
 #import "ReviewController.h"
 
-@interface ReviewController ()
+@interface ReviewController ()<UIGestureRecognizerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
 }
 
 /*
