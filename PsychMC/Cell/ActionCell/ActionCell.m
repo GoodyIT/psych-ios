@@ -10,22 +10,16 @@
 
 @implementation ActionCell
 
-static UIColor *ColorFromRGB(uint32_t colorValue) {
-    return [[UIColor alloc] initWithRed:(CGFloat)(((colorValue >> 16) & 0xFF) / 255.0)
-                                  green:(CGFloat)(((colorValue >> 8) & 0xFF) / 255.0)
-                                   blue:(CGFloat)((colorValue & 0xFF) / 255.0) alpha:1];
-}
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    MDCButtonScheme *buttonScheme = [[MDCButtonScheme alloc] init];
-    MDCSemanticColorScheme *colorSchema = [[MDCSemanticColorScheme alloc] init];
-  
-    colorSchema.primaryColor = ColorFromRGB(0x212121);
-    colorSchema.primaryColorVariant = ColorFromRGB(0x444444);
-    colorSchema.backgroundColor = colorSchema.onPrimaryColor = colorSchema.surfaceColor = ColorFromRGB(0x212121);
-
+//    MDCButtonScheme *buttonScheme = [[MDCButtonScheme alloc] init];
+//    MDCSemanticColorScheme *colorSchema = [[MDCSemanticColorScheme alloc] init];
+//  
+//    colorSchema.primaryColor = ColorFromRGB(0x212121);
+//    colorSchema.primaryColorVariant = ColorFromRGB(0x444444);
+//    colorSchema.backgroundColor = colorSchema.onPrimaryColor = colorSchema.surfaceColor = ColorFromRGB(0x212121);
+    [self.checkBtn setTitleFont:[Setting curFont] forState:UIControlStateNormal];
 //    [MDCTextButtonThemer applyScheme:buttonScheme toButton:self.checkBtn];
 }
 

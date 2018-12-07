@@ -29,54 +29,54 @@
 //    [NSFileManager.defaultManager removeItemAtPath:dbPath error:NULL];
     
     [FCModel openDatabaseAtPath:dbPath withDatabaseInitializer:NULL schemaBuilder:^(FMDatabase *db, int *schemaVersion) {
-        [db setCrashOnErrors:YES];
-        //        db.traceExecution = YES; // Log every query (useful to learn what FCModel is doing or analyze performance)
-        [db beginTransaction];
-
-        void (^failedAt)(int statement) = ^(int statement){
-            int lastErrorCode = db.lastErrorCode;
-            NSString *lastErrorMessage = db.lastErrorMessage;
-            [db rollback];
-            NSAssert3(0, @"Migration statement %d failed, code %d: %@", statement, lastErrorCode, lastErrorMessage);
-        };
-
-        if (*schemaVersion < 1) {
-            if (! [db executeUpdate:
-                   @"CREATE TABLE Work ("
-                   @"    ID                 INTEGER PRIMARY KEY,"
-                   @"    historyIDs         TEXT NOT NULL,"
-                   @"    numberOfQuestions  INTEGER NOT NULL DEFAULT 1,"
-                   @"    wrongQuestions     TEXT NOT NULL,"
-                   @"    flaggedQuestions   TEXT NOT NULL,"
-                   @"    missedQuestions    TEXT NOT NULL,"
-                   @"    type               TEXT NOT NULL,"
-                   @"    totalTime          REAL,"
-                   @"    elasedTime         REAL,"
-                   @"    createdAt          TEXT NOT NULL"
-                   @");"
-                   ]) failedAt(1);
-            if (! [db executeUpdate:@"CREATE UNIQUE INDEX IF NOT EXISTS ID ON Question (ID);"]) failedAt(2);
-
-//            if (! [db executeUpdate:
-//                   @"CREATE TABLE Color ("
-//                   @"    name         TEXT NOT NULL PRIMARY KEY,"
-//                   @"    hex          TEXT NOT NULL"
-//                   @");"
-//                   ]) failedAt(3);
-
-            // Create any other tables...
-
-            *schemaVersion = 1;
-        }
-
-        // If you wanted to change the schema in a later app version, you'd add something like this here:
-        /*
-         if (*schemaVersion < 2) {
-         if (! [db executeUpdate:@"ALTER TABLE Person ADD COLUMN lastModified INTEGER NULL"]) failedAt(3);
-         *schemaVersion = 2;
-         }
-         */
+//        [db setCrashOnErrors:YES];
+//        //        db.traceExecution = YES; // Log every query (useful to learn what FCModel is doing or analyze performance)
+//        [db beginTransaction];
 //
+//        void (^failedAt)(int statement) = ^(int statement){
+//            int lastErrorCode = db.lastErrorCode;
+//            NSString *lastErrorMessage = db.lastErrorMessage;
+//            [db rollback];
+//            NSAssert3(0, @"Migration statement %d failed, code %d: %@", statement, lastErrorCode, lastErrorMessage);
+//        };
+//
+//        if (*schemaVersion < 1) {
+//            if (! [db executeUpdate:
+//                   @"CREATE TABLE Work ("
+//                   @"    ID                 INTEGER PRIMARY KEY,"
+//                   @"    historyIDs         TEXT NOT NULL,"
+//                   @"    numberOfQuestions  INTEGER NOT NULL DEFAULT 1,"
+//                   @"    wrongQuestions     TEXT NOT NULL,"
+//                   @"    flaggedQuestions   TEXT NOT NULL,"
+//                   @"    missedQuestions    TEXT NOT NULL,"
+//                   @"    type               TEXT NOT NULL,"
+//                   @"    totalTime          REAL,"
+//                   @"    elapsedTime         REAL,"
+//                   @"    createdAt          TEXT NOT NULL"
+//                   @");"
+//                   ]) failedAt(1);
+//            if (! [db executeUpdate:@"CREATE UNIQUE INDEX IF NOT EXISTS ID ON Question (ID);"]) failedAt(2);
+//
+////            if (! [db executeUpdate:
+////                   @"CREATE TABLE Color ("
+////                   @"    name         TEXT NOT NULL PRIMARY KEY,"
+////                   @"    hex          TEXT NOT NULL"
+////                   @");"
+////                   ]) failedAt(3);
+//
+//            // Create any other tables...
+//
+//            *schemaVersion = 1;
+//        }
+//
+//        // If you wanted to change the schema in a later app version, you'd add something like this here:
+//        /*
+//         if (*schemaVersion < 2) {
+//         if (! [db executeUpdate:@"ALTER TABLE Person ADD COLUMN lastModified INTEGER NULL"]) failedAt(3);
+//         *schemaVersion = 2;
+//         }
+//         */
+////
 //        [db commit];
     }];
     

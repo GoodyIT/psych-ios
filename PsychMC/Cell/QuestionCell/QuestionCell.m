@@ -15,7 +15,7 @@
     NSString* selectedAnswersIdxs;
      __block NSMutableArray* newArray;
     
-    CompletionHandler _completion;
+    CompletionHandler _answerCompletion;
 }
 @end
 
@@ -36,6 +36,7 @@
     
     self.questionText.lineBreakMode = NSLineBreakByWordWrapping;
     self.questionText.numberOfLines = 0;
+    [self.questionText setFont:[Setting curFont]];
     
     selectedAnswersIdxs = @"";
     newArray = [NSMutableArray new];
@@ -54,7 +55,8 @@
     chipView.titleLabel.textAlignment = NSTextAlignmentLeft;
     chipView.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     chipView.titleLabel.numberOfLines = 0;
-    chipView.titlePadding = UIEdgeInsetsMake(0, 20, 0, 20);
+    chipView.titleFont = [Setting curFont];
+    chipView.titlePadding = UIEdgeInsetsMake(10, 20, 10, 20);
     
     chipView.accessoryView = nil;
      [chipView setBorderColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -95,6 +97,15 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
+    NSMutableArray* indexPaths = [NSMutableArray new];
+    for (int i = 0; i < [[self getAnswers] count]; i++) {
+        [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+    }
+    if (curQuestion.isAnswerChecked) {
+        [collectionView reloadItemsAtIndexPaths:[indexPaths copy]];
+        return;
+    }
+    
     NSString* curIndex = [NSString stringWithFormat:@"%ld", indexPath.row];
     NSString* selectedAnswer = [self getAnswers][indexPath.row];
     if ([curQuestion.type isEqualToString:@"multiple"]) {
@@ -114,19 +125,25 @@
     
     curQuestion.numberOfTry++;
     
-    if (_completion && curQuestion.numberOfTry > ([curQuestion getCorrects].count + 1)) {
+    if (_answerCompletion && curQuestion.numberOfTry > ([curQuestion getCorrects].count + 1)) {
         [curQuestion checkAnswer];
         if (!curQuestion.isAnsweredCorrectly) {
             selectedAnswersIdxs = @"";
-             _completion();
+             _answerCompletion();
         }
     }
     
-    NSMutableArray* indexPaths = [NSMutableArray new];
-    for (int i = 0; i < [[self getAnswers] count]; i++) {
-        [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
-    }
     [collectionView reloadItemsAtIndexPaths:[indexPaths copy]];
+}
+
+- (IBAction) didTapFlag: (id)sender
+{
+     curQuestion.isFlagged = !curQuestion.isFlagged;
+    if (curQuestion.isFlagged) {
+        [_flagBtn setImage:[UIImage imageNamed:@"icon_flag_red"] forState:UIControlStateNormal];
+    } else {
+        [_flagBtn setImage:[UIImage imageNamed:@"icon_flag"] forState:UIControlStateNormal];
+    }
 }
 
 - (void) setHeight: (NSInteger) height
@@ -137,7 +154,7 @@
 - (void) setData: (Question*) question completion:(CompletionHandler) completion
 {
     curQuestion = question;
-    _completion = completion;
+    _answerCompletion = completion;
     self.questionText.text = question.question;
     numberOfAnswers = [[self getAnswers] count];
     [self setHeight: 70 * numberOfAnswers];

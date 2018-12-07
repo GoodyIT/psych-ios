@@ -38,10 +38,10 @@
 
     NSLog(@"all works %@", [Work allInstances]);
     Work* work = [[Work alloc] init];
-    work.curQuestionIndex = 0;
+    work.ID = [Work numberOfInstances] + 1;
     work.numberOfQuestions = [[Question allInstances] count];
     work.historyIDs = @"";
-    work.createdAt = [Util getToday];
+   
     QuestionViewController *qVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"QuestionViewController"];
     qVC.isFirstQuestion = @"First";
     qVC.work = work;

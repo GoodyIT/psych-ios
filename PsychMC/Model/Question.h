@@ -30,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSInteger numberOfTry;
 @property (nonatomic) BOOL isAnsweredCorrectly;
 @property (nonatomic) BOOL isAnswerChecked;
+@property (nonatomic) BOOL isBtnTriggered;
+@property (nonatomic) BOOL isFlagged;
 //@property (nonatomic) Work *work;
 
 // Functions

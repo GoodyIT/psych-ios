@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionHeight;
 @property (weak, nonatomic) IBOutlet UILabel *questionText;
 @property (strong, nonatomic) MDCChipCollectionViewFlowLayout *layout;
+@property (weak, nonatomic) IBOutlet UIButton *flagBtn;
 
 - (void) setHeight: (NSInteger) height;
 

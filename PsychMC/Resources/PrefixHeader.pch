@@ -18,10 +18,12 @@
 #import "MaterialChips.h"
 #import "MaterialButtons.h"
 #import "MaterialButtons+ButtonThemer.h"
+#import "MaterialBottomNavigation.h"
 
 #import "Util.h"
 #import "Question.h"
 #import "Work.h"
+#import "Setting.h"
 
 typedef void(^CompletionHandler)(void);
 

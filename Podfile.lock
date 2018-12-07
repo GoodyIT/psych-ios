@@ -5,6 +5,13 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - MaterialComponents/AnimationTiming (68.2.0)
+  - MaterialComponents/BottomNavigation (68.2.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/Buttons (68.2.0):
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
@@ -84,6 +91,7 @@ PODS:
 DEPENDENCIES:
   - FCModel
   - FMDB
+  - MaterialComponents/BottomNavigation
   - MaterialComponents/Buttons
   - "MaterialComponents/Buttons+ButtonThemer"
   - MaterialComponents/Cards
@@ -108,6 +116,6 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
   Realm: 864477d028db77f7c5a0cba64a4892ad53db128a
 
-PODFILE CHECKSUM: fb27d968afce76de61a814028dcb240c52569a9c
+PODFILE CHECKSUM: d20d68c57e57fe84cbe2b58af88001372c998dd0
 
 COCOAPODS: 1.5.3

@@ -32,6 +32,14 @@
 		794D3F8721BA5CF3008CDF7C /* icon_check_done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F8421BA5CF3008CDF7C /* icon_check_done@2x.png */; };
 		794D3F8821BA5CF3008CDF7C /* icon_check_done@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F8521BA5CF3008CDF7C /* icon_check_done@3x.png */; };
 		794D3F8921BA5CF3008CDF7C /* icon_check_done.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F8621BA5CF3008CDF7C /* icon_check_done.png */; };
+		794D3F8D21BA84EC008CDF7C /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D3F8C21BA84EC008CDF7C /* TabbarViewController.m */; };
+		794D3F9821BA9509008CDF7C /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D3F9621BA9509008CDF7C /* Setting.m */; };
+		794D3F9C21BA9ABB008CDF7C /* icon_flag@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F9921BA9ABB008CDF7C /* icon_flag@3x.png */; };
+		794D3F9D21BA9ABB008CDF7C /* icon_flag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F9A21BA9ABB008CDF7C /* icon_flag@2x.png */; };
+		794D3F9E21BA9ABB008CDF7C /* icon_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F9B21BA9ABB008CDF7C /* icon_flag.png */; };
+		794D3FA221BAA08A008CDF7C /* icon_flag_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F9F21BAA08A008CDF7C /* icon_flag_red@3x.png */; };
+		794D3FA321BAA08A008CDF7C /* icon_flag_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3FA021BAA08A008CDF7C /* icon_flag_red.png */; };
+		794D3FA421BAA08A008CDF7C /* icon_flag_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3FA121BAA08A008CDF7C /* icon_flag_red@2x.png */; };
 		79D02FC021B744AD00D5017D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D02FBF21B744AD00D5017D /* AppDelegate.m */; };
 		79D02FC321B744AD00D5017D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D02FC221B744AD00D5017D /* FirstViewController.m */; };
 		79D02FC621B744AD00D5017D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D02FC521B744AD00D5017D /* SecondViewController.m */; };
@@ -79,6 +87,16 @@
 		794D3F8421BA5CF3008CDF7C /* icon_check_done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check_done@2x.png"; sourceTree = "<group>"; };
 		794D3F8521BA5CF3008CDF7C /* icon_check_done@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check_done@3x.png"; sourceTree = "<group>"; };
 		794D3F8621BA5CF3008CDF7C /* icon_check_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_done.png; sourceTree = "<group>"; };
+		794D3F8B21BA84EC008CDF7C /* TabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
+		794D3F8C21BA84EC008CDF7C /* TabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarViewController.m; sourceTree = "<group>"; };
+		794D3F9621BA9509008CDF7C /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		794D3F9721BA9509008CDF7C /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		794D3F9921BA9ABB008CDF7C /* icon_flag@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_flag@3x.png"; sourceTree = "<group>"; };
+		794D3F9A21BA9ABB008CDF7C /* icon_flag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_flag@2x.png"; sourceTree = "<group>"; };
+		794D3F9B21BA9ABB008CDF7C /* icon_flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_flag.png; sourceTree = "<group>"; };
+		794D3F9F21BAA08A008CDF7C /* icon_flag_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_flag_red@3x.png"; sourceTree = "<group>"; };
+		794D3FA021BAA08A008CDF7C /* icon_flag_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_flag_red.png; sourceTree = "<group>"; };
+		794D3FA121BAA08A008CDF7C /* icon_flag_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_flag_red@2x.png"; sourceTree = "<group>"; };
 		79D02FBB21B744AD00D5017D /* PsychMC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychMC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D02FBE21B744AD00D5017D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		79D02FBF21B744AD00D5017D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,6 +137,7 @@
 		794D3F2221B7B31F008CDF7C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				794D3F8A21BA84BD008CDF7C /* TabbarViewController */,
 				794D3F6D21B94A6D008CDF7C /* ReviewController */,
 				794D3F2321B7B330008CDF7C /* QuestionViewController */,
 			);
@@ -177,6 +196,8 @@
 		794D3F3721B7DE3A008CDF7C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				794D3F9521BA9509008CDF7C /* Setting */,
+				794D3F8E21BA8D57008CDF7C /* Question */,
 				794D3F4E21B865E1008CDF7C /* Work */,
 				794D3F3821B7DE93008CDF7C /* Question.h */,
 				794D3F3921B7DE93008CDF7C /* Question.m */,
@@ -206,6 +227,12 @@
 		794D3F5221B87A7E008CDF7C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				794D3FA021BAA08A008CDF7C /* icon_flag_red.png */,
+				794D3FA121BAA08A008CDF7C /* icon_flag_red@2x.png */,
+				794D3F9F21BAA08A008CDF7C /* icon_flag_red@3x.png */,
+				794D3F9B21BA9ABB008CDF7C /* icon_flag.png */,
+				794D3F9A21BA9ABB008CDF7C /* icon_flag@2x.png */,
+				794D3F9921BA9ABB008CDF7C /* icon_flag@3x.png */,
 				794D3F8621BA5CF3008CDF7C /* icon_check_done.png */,
 				794D3F8421BA5CF3008CDF7C /* icon_check_done@2x.png */,
 				794D3F8521BA5CF3008CDF7C /* icon_check_done@3x.png */,
@@ -254,6 +281,31 @@
 				794D3F7A21B9C83D008CDF7C /* Util.m */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		794D3F8A21BA84BD008CDF7C /* TabbarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F8B21BA84EC008CDF7C /* TabbarViewController.h */,
+				794D3F8C21BA84EC008CDF7C /* TabbarViewController.m */,
+			);
+			path = TabbarViewController;
+			sourceTree = "<group>";
+		};
+		794D3F8E21BA8D57008CDF7C /* Question */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		794D3F9521BA9509008CDF7C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				794D3F9721BA9509008CDF7C /* Setting.h */,
+				794D3F9621BA9509008CDF7C /* Setting.m */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		79D02FB221B744AD00D5017D = {
@@ -366,12 +418,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				794D3F7621B9B2CF008CDF7C /* icon_check.png in Resources */,
+				794D3FA221BAA08A008CDF7C /* icon_flag_red@3x.png in Resources */,
 				794D3F8221BA5B12008CDF7C /* icon_x@2x.png in Resources */,
 				794D3F5721B87A96008CDF7C /* Psych@2x.png in Resources */,
 				79D02FCE21B744AE00D5017D /* LaunchScreen.storyboard in Resources */,
+				794D3F9C21BA9ABB008CDF7C /* icon_flag@3x.png in Resources */,
 				794D3F5821B87A96008CDF7C /* Psych@3x.png in Resources */,
+				794D3FA421BAA08A008CDF7C /* icon_flag_red@2x.png in Resources */,
 				794D3F2D21B7CE1B008CDF7C /* QuestionCell.xib in Resources */,
+				794D3FA321BAA08A008CDF7C /* icon_flag_red.png in Resources */,
 				794D3F3421B7D0EC008CDF7C /* CardCell.xib in Resources */,
+				794D3F9E21BA9ABB008CDF7C /* icon_flag.png in Resources */,
+				794D3F9D21BA9ABB008CDF7C /* icon_flag@2x.png in Resources */,
 				794D3F7521B9B2CF008CDF7C /* icon_check@3x.png in Resources */,
 				794D3F7421B9B2CF008CDF7C /* icon_check@2x.png in Resources */,
 				794D3F6C21B9472B008CDF7C /* psych.sqlite3 in Resources */,
@@ -415,10 +473,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PsychMC/Pods-PsychMC-resources.sh",
+				"${PODS_ROOT}/MaterialComponents/components/BottomNavigation/src/MaterialBottomNavigation.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_check_circle.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialBottomNavigation.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_check_circle.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,10 +493,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794D3F9821BA9509008CDF7C /* Setting.m in Sources */,
 				794D3F5121B865F6008CDF7C /* Work.m in Sources */,
 				79D02FC621B744AD00D5017D /* SecondViewController.m in Sources */,
 				794D3F3321B7D0EC008CDF7C /* CardCell.m in Sources */,
 				794D3F2621B7B353008CDF7C /* QuestionViewController.m in Sources */,
+				794D3F8D21BA84EC008CDF7C /* TabbarViewController.m in Sources */,
 				794D3F7021B94A83008CDF7C /* ReviewController.m in Sources */,
 				79D02FC021B744AD00D5017D /* AppDelegate.m in Sources */,
 				794D3F4C21B84948008CDF7C /* ActionCell.m in Sources */,

@@ -13,6 +13,8 @@ pod 'MaterialComponents/Buttons'
 
 pod 'MaterialComponents/Buttons+ButtonThemer'
 
+pod 'MaterialComponents/BottomNavigation'
+
 pod 'FMDB'
 
 pod 'FCModel'

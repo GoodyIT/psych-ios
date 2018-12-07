@@ -10,24 +10,6 @@
 //#import "MaterialShadowLayer.h"
 
 @implementation CardCell
-//
-//+ (Class)layerClass {
-//    return [MDCShadowLayer class];
-//}
-//
-//- (MDCShadowLayer *)shadowLayer {
-//    return (MDCShadowLayer *)self.layer;
-//}
-//
-//- (void)setDefaultElevation {
-//    self.shadowLayer.elevation = MDCShadowElevationCardResting;
-//}
-//
-//- (void) layoutSubviews
-//{
-//    [super layoutSubviews];
-//    [self.contentView setFrame:UIEdgeInsetsInsetRect(self.contentView.frame, UIEdgeInsetsMake(0, 26, 0, 26))];
-//}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -36,6 +18,10 @@
     self.card.cornerRadius = 8.0f;
     self.successText.lineBreakMode = NSLineBreakByWordWrapping;
     self.successText.numberOfLines = 0;
+    self.explanation.lineBreakMode = NSLineBreakByWordWrapping;
+    self.explanation.numberOfLines = 0;
+    [self.successText setFont:[Setting curFont]];
+    [self.explanation setFont:[Setting curFont]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -46,7 +32,7 @@
 
 - (void) updateText: (Question*) question
 {
-    if (question.isAnsweredCorrectly) {
+    if (question.isAnsweredCorrectly || question.isBtnTriggered) {
         self.successText.text = @"That's Correct";
     } else {
         self.successText.text = @"That is not correct.";

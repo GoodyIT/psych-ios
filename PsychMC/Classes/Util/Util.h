@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString*) getToday;
 
++ (UIColor *)colorWithHexString:(NSString *)string withAlpha:(CGFloat)alpha;
+
 @end
 
 NS_ASSUME_NONNULL_END

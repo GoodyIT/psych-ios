@@ -25,6 +25,8 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
+     [super viewWillAppear:animated];
+    
     [self.navigationItem setHidesBackButton:YES animated:NO];
     if (_isFirstQuestion != nil) {
         
@@ -41,8 +43,6 @@
         UIBarButtonItem* doneBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(onTapDone:)];
         self.navigationItem.rightBarButtonItem = doneBtn;
     }
-
-    [super viewWillAppear:animated];
 }
 
 - (void)viewDidLoad {
@@ -112,22 +112,25 @@
     NSLog(@"Done");
 }
 
+
 - (void)gotoNext:(id)sender {
     _work.curQuestionIndex++;
     if (!_curQuestion.isAnsweredCorrectly) {
-        _work.wrongQuestions = [NSString stringWithFormat:@"%@,%lld", _work.wrongQuestions, _curQuestion.ID];
+        [_work updateWrongQuestions:_curQuestion.ID];
          NSLog(@"wrongly answered question %lld, all wrong answered Questions %@", _curQuestion.ID, _work.wrongQuestions);
     }
     if (!_curQuestion.isAnswerChecked) {
-        _work.missedQuestions = [NSString stringWithFormat:@"%@,%lld", _work.missedQuestions, _curQuestion.ID];
+        [_work updateMissedQuestions:_curQuestion.ID];
         NSLog(@"skipped question %lld, all missed Questions %@", _curQuestion.ID, _work.missedQuestions);
     }
+    [_work updateFlaggedQuestions:_curQuestion];
     [self.work save];
     [self pushQuestionViewController];
 }
 
 - (void) gotoPrev: (id) sender {
     _work.curQuestionIndex--;
+    [_work updateFlaggedQuestions:_curQuestion];
     [self.work save];
     [self popQuestionViewController];
 }
@@ -146,7 +149,7 @@
 
 - (void) expandTable
 {
-    if (![_work.type isEqualToString:@"test"]) {
+    if (![_work.mode isEqualToString:@"test"]) {
         self->numberOfSections = 3;
         [_work save];
         [self.tableView reloadData];
@@ -197,6 +200,7 @@
         
         cell.checkHandler = ^{
             [self->_curQuestion checkAnswer];
+            self->_curQuestion.isBtnTriggered = YES;
             [self expandTable];
         };
         return cell;
