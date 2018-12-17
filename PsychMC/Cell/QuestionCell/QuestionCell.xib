@@ -42,7 +42,7 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVc-Ga-MeL">
-                                <rect key="frame" x="314" y="15" width="21" height="22"/>
+                                <rect key="frame" x="314" y="21" width="21" height="22"/>
                                 <state key="normal" image="icon_flag.png"/>
                                 <state key="selected" image="icon_flag_red.png"/>
                                 <connections>
@@ -54,7 +54,7 @@
                         <constraints>
                             <constraint firstItem="0gY-af-t4i" firstAttribute="leading" secondItem="MGp-Uw-goA" secondAttribute="leadingMargin" constant="12" id="1GI-vE-qaX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AVc-Ga-MeL" secondAttribute="trailing" constant="12" id="5pG-Si-Esh"/>
-                            <constraint firstItem="AVc-Ga-MeL" firstAttribute="centerY" secondItem="0gY-af-t4i" secondAttribute="centerY" id="QLS-zo-sRj"/>
+                            <constraint firstItem="AVc-Ga-MeL" firstAttribute="top" secondItem="0gY-af-t4i" secondAttribute="top" constant="5" id="N1Q-oP-Hbz"/>
                             <constraint firstItem="0gY-af-t4i" firstAttribute="top" secondItem="MGp-Uw-goA" secondAttribute="top" constant="16" id="R9L-gD-1PC"/>
                             <constraint firstItem="AVc-Ga-MeL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0gY-af-t4i" secondAttribute="trailing" constant="12" id="ZHn-5y-ExR"/>
                             <constraint firstAttribute="bottomMargin" secondItem="zoa-92-aui" secondAttribute="bottom" id="blc-Xv-PuX"/>

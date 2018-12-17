@@ -12,7 +12,7 @@
 
 + (UIFont*) curFont
 {
-    NSArray* fontArray = @[@(27.0), @(20.0), @(23.0)];
+    NSArray* fontArray = @[@(27.0), @(25.0), @(29.0)];
     
     CGFloat curFontSize = [fontArray[((Setting*)[Setting allInstances][0]).fontSize - 1] floatValue];
     //return [UIFont systemFontOfSize:curFontSize];

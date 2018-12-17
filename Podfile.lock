@@ -5,13 +5,6 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - MaterialComponents/AnimationTiming (68.2.0)
-  - MaterialComponents/BottomNavigation (68.2.0):
-    - MaterialComponents/Ink
-    - MaterialComponents/private/Math
-    - MaterialComponents/ShadowElevations
-    - MaterialComponents/ShadowLayer
-    - MaterialComponents/Typography
-    - MDFInternationalization
   - MaterialComponents/Buttons (68.2.0):
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
@@ -51,6 +44,13 @@ PODS:
     - MaterialComponents/TextFields
     - MaterialComponents/Typography
     - MDFInternationalization
+  - MaterialComponents/Dialogs (68.2.0):
+    - MaterialComponents/Buttons
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/Ink (68.2.0):
     - MaterialComponents/private/Math
   - MaterialComponents/Palettes (68.2.0)
@@ -58,6 +58,8 @@ PODS:
   - MaterialComponents/private/Icons/Base (68.2.0)
   - MaterialComponents/private/Icons/ic_check_circle (68.2.0):
     - MaterialComponents/private/Icons/Base
+  - MaterialComponents/private/KeyboardWatcher (68.2.0):
+    - MaterialComponents/private/Application
   - MaterialComponents/private/Math (68.2.0)
   - MaterialComponents/private/ShapeLibrary (68.2.0):
     - MaterialComponents/private/Math
@@ -91,11 +93,11 @@ PODS:
 DEPENDENCIES:
   - FCModel
   - FMDB
-  - MaterialComponents/BottomNavigation
   - MaterialComponents/Buttons
   - "MaterialComponents/Buttons+ButtonThemer"
   - MaterialComponents/Cards
   - MaterialComponents/Chips
+  - MaterialComponents/Dialogs
   - MaterialComponents/ShadowElevations
   - Realm
 
@@ -116,6 +118,6 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
   Realm: 864477d028db77f7c5a0cba64a4892ad53db128a
 
-PODFILE CHECKSUM: d20d68c57e57fe84cbe2b58af88001372c998dd0
+PODFILE CHECKSUM: 005e10eb63eb71c1e7450f0a16035538694d7d54
 
 COCOAPODS: 1.5.3

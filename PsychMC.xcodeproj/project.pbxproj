@@ -20,7 +20,6 @@
 		794D3F5721B87A96008CDF7C /* Psych@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F5421B87A96008CDF7C /* Psych@2x.png */; };
 		794D3F5821B87A96008CDF7C /* Psych@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F5521B87A96008CDF7C /* Psych@3x.png */; };
 		794D3F6C21B9472B008CDF7C /* psych.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F6B21B9472B008CDF7C /* psych.sqlite3 */; };
-		794D3F7021B94A83008CDF7C /* ReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D3F6F21B94A83008CDF7C /* ReviewController.m */; };
 		794D3F7421B9B2CF008CDF7C /* icon_check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F7121B9B2CE008CDF7C /* icon_check@2x.png */; };
 		794D3F7521B9B2CF008CDF7C /* icon_check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F7221B9B2CE008CDF7C /* icon_check@3x.png */; };
 		794D3F7621B9B2CF008CDF7C /* icon_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F7321B9B2CE008CDF7C /* icon_check.png */; };
@@ -40,6 +39,10 @@
 		794D3FA221BAA08A008CDF7C /* icon_flag_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3F9F21BAA08A008CDF7C /* icon_flag_red@3x.png */; };
 		794D3FA321BAA08A008CDF7C /* icon_flag_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3FA021BAA08A008CDF7C /* icon_flag_red.png */; };
 		794D3FA421BAA08A008CDF7C /* icon_flag_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D3FA121BAA08A008CDF7C /* icon_flag_red@2x.png */; };
+		79670EFB21C113DE00079523 /* QuestionCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79670EFA21C113DE00079523 /* QuestionCollectionCell.m */; };
+		79670EFF21C1290900079523 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79670EFE21C1290900079523 /* SettingsViewController.m */; };
+		79670F0221C12B1000079523 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79670F0121C12B1000079523 /* ReviewViewController.m */; };
+		798CF47521C7D68F00070A1C /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 798CF47421C7D68F00070A1C /* Review.m */; };
 		79D02FC021B744AD00D5017D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D02FBF21B744AD00D5017D /* AppDelegate.m */; };
 		79D02FC321B744AD00D5017D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D02FC221B744AD00D5017D /* FirstViewController.m */; };
 		79D02FC621B744AD00D5017D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D02FC521B744AD00D5017D /* SecondViewController.m */; };
@@ -73,8 +76,6 @@
 		794D3F5421B87A96008CDF7C /* Psych@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Psych@2x.png"; path = "PsychMC/Assets.xcassets/Psych.imageset/Psych@2x.png"; sourceTree = SOURCE_ROOT; };
 		794D3F5521B87A96008CDF7C /* Psych@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Psych@3x.png"; path = "PsychMC/Assets.xcassets/Psych.imageset/Psych@3x.png"; sourceTree = SOURCE_ROOT; };
 		794D3F6B21B9472B008CDF7C /* psych.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = psych.sqlite3; sourceTree = "<group>"; };
-		794D3F6E21B94A83008CDF7C /* ReviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewController.h; sourceTree = "<group>"; };
-		794D3F6F21B94A83008CDF7C /* ReviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewController.m; sourceTree = "<group>"; };
 		794D3F7121B9B2CE008CDF7C /* icon_check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check@2x.png"; sourceTree = "<group>"; };
 		794D3F7221B9B2CE008CDF7C /* icon_check@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check@3x.png"; sourceTree = "<group>"; };
 		794D3F7321B9B2CE008CDF7C /* icon_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check.png; sourceTree = "<group>"; };
@@ -97,6 +98,14 @@
 		794D3F9F21BAA08A008CDF7C /* icon_flag_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_flag_red@3x.png"; sourceTree = "<group>"; };
 		794D3FA021BAA08A008CDF7C /* icon_flag_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_flag_red.png; sourceTree = "<group>"; };
 		794D3FA121BAA08A008CDF7C /* icon_flag_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_flag_red@2x.png"; sourceTree = "<group>"; };
+		79670EF921C113DE00079523 /* QuestionCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionCollectionCell.h; sourceTree = "<group>"; };
+		79670EFA21C113DE00079523 /* QuestionCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionCollectionCell.m; sourceTree = "<group>"; };
+		79670EFD21C1290900079523 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		79670EFE21C1290900079523 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		79670F0021C12B1000079523 /* ReviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
+		79670F0121C12B1000079523 /* ReviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
+		798CF47321C7D68F00070A1C /* Review.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		798CF47421C7D68F00070A1C /* Review.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
 		79D02FBB21B744AD00D5017D /* PsychMC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychMC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D02FBE21B744AD00D5017D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		79D02FBF21B744AD00D5017D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -137,6 +146,7 @@
 		794D3F2221B7B31F008CDF7C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				79670EFC21C128F300079523 /* SettingsViewController */,
 				794D3F8A21BA84BD008CDF7C /* TabbarViewController */,
 				794D3F6D21B94A6D008CDF7C /* ReviewController */,
 				794D3F2321B7B330008CDF7C /* QuestionViewController */,
@@ -156,6 +166,8 @@
 		794D3F2721B7CDEA008CDF7C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				798CF46F21C7D61000070A1C /* ReviewCell */,
+				79670EF821C113C200079523 /* QuestionCollectionCell */,
 				794D3F4821B84933008CDF7C /* ActionCell */,
 				794D3F2F21B7D0E1008CDF7C /* CardCell */,
 				794D3F2821B7CE02008CDF7C /* QuestionCell */,
@@ -260,8 +272,8 @@
 		794D3F6D21B94A6D008CDF7C /* ReviewController */ = {
 			isa = PBXGroup;
 			children = (
-				794D3F6E21B94A83008CDF7C /* ReviewController.h */,
-				794D3F6F21B94A83008CDF7C /* ReviewController.m */,
+				79670F0021C12B1000079523 /* ReviewViewController.h */,
+				79670F0121C12B1000079523 /* ReviewViewController.m */,
 			);
 			path = ReviewController;
 			sourceTree = "<group>";
@@ -306,6 +318,34 @@
 				794D3F9621BA9509008CDF7C /* Setting.m */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		79670EF821C113C200079523 /* QuestionCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				79670EF921C113DE00079523 /* QuestionCollectionCell.h */,
+				79670EFA21C113DE00079523 /* QuestionCollectionCell.m */,
+			);
+			path = QuestionCollectionCell;
+			sourceTree = "<group>";
+		};
+		79670EFC21C128F300079523 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79670EFD21C1290900079523 /* SettingsViewController.h */,
+				79670EFE21C1290900079523 /* SettingsViewController.m */,
+			);
+			name = SettingsViewController;
+			path = QuestionViewController/SettingsViewController;
+			sourceTree = "<group>";
+		};
+		798CF46F21C7D61000070A1C /* ReviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				798CF47321C7D68F00070A1C /* Review.h */,
+				798CF47421C7D68F00070A1C /* Review.m */,
+			);
+			path = ReviewCell;
 			sourceTree = "<group>";
 		};
 		79D02FB221B744AD00D5017D = {
@@ -473,12 +513,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PsychMC/Pods-PsychMC-resources.sh",
-				"${PODS_ROOT}/MaterialComponents/components/BottomNavigation/src/MaterialBottomNavigation.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/Dialogs/src/MaterialDialogs.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_check_circle.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialBottomNavigation.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialDialogs.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_check_circle.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,17 +533,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79670EFB21C113DE00079523 /* QuestionCollectionCell.m in Sources */,
 				794D3F9821BA9509008CDF7C /* Setting.m in Sources */,
+				79670F0221C12B1000079523 /* ReviewViewController.m in Sources */,
 				794D3F5121B865F6008CDF7C /* Work.m in Sources */,
+				79670EFF21C1290900079523 /* SettingsViewController.m in Sources */,
 				79D02FC621B744AD00D5017D /* SecondViewController.m in Sources */,
 				794D3F3321B7D0EC008CDF7C /* CardCell.m in Sources */,
 				794D3F2621B7B353008CDF7C /* QuestionViewController.m in Sources */,
 				794D3F8D21BA84EC008CDF7C /* TabbarViewController.m in Sources */,
-				794D3F7021B94A83008CDF7C /* ReviewController.m in Sources */,
 				79D02FC021B744AD00D5017D /* AppDelegate.m in Sources */,
 				794D3F4C21B84948008CDF7C /* ActionCell.m in Sources */,
 				79D02FD121B744AE00D5017D /* main.m in Sources */,
 				794D3F3A21B7DE93008CDF7C /* Question.m in Sources */,
+				798CF47521C7D68F00070A1C /* Review.m in Sources */,
 				79D02FC321B744AD00D5017D /* FirstViewController.m in Sources */,
 				794D3F2C21B7CE1B008CDF7C /* QuestionCell.m in Sources */,
 				794D3F7B21B9C83D008CDF7C /* Util.m in Sources */,

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TabbarViewController : UITabBarController
 
+@property (nonatomic, assign) NSInteger workID;
+
 @end
 
 NS_ASSUME_NONNULL_END

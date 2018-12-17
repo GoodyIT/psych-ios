@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class Question;
+
 @interface Util : NSObject
 
 + (uint32_t)randomUInt32: (NSInteger) count;
@@ -18,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)colorWithHexString:(NSString *)string withAlpha:(CGFloat)alpha;
 
++ (NSString*) randomQuestions:(NSInteger) count forFree:(NSInteger) free;
+
++ (Question*) getQuestionAtIndex: (NSInteger) index forQuestions: (NSString*) questions;
 @end
 
 NS_ASSUME_NONNULL_END

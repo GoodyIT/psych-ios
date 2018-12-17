@@ -32,6 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) updateMissedQuestions: (NSInteger) ID;
 - (void) updateFlaggedQuestions: (Question*) curQuestion;
 
+- (NSInteger) numberOfMissedQuestions;
+- (NSInteger) numberOfWrongQuestions;
+- (NSInteger) numberOfFlaggedQuestions;
+
 @end
 
 NS_ASSUME_NONNULL_END

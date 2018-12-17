@@ -12,7 +12,7 @@
 {
     NSInteger numberOfAnswers;
     Question* curQuestion;
-    NSString* selectedAnswersIdxs;
+   
      __block NSMutableArray* newArray;
     
     CompletionHandler _answerCompletion;
@@ -25,6 +25,7 @@
     [super awakeFromNib];
     // Initialization code
     _layout = [[MDCChipCollectionViewFlowLayout alloc] init];
+//    _layout.estimatedItemSize = CGSizeMake(1.f, 1.f);
     [_collectionView setCollectionViewLayout:_layout];
     
     _collectionView.dataSource = self;
@@ -38,7 +39,6 @@
     self.questionText.numberOfLines = 0;
     [self.questionText setFont:[Setting curFont]];
     
-    selectedAnswersIdxs = @"";
     newArray = [NSMutableArray new];
 }
 
@@ -51,18 +51,21 @@
     MDCChipCollectionViewCell *cell =
     [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];
     MDCChipView *chipView = cell.chipView;
+    chipView.contentPadding = UIEdgeInsetsMake(10, 10, 10, 10);
     chipView.titleLabel.text = [self getAnswers][indexPath.row];
     chipView.titleLabel.textAlignment = NSTextAlignmentLeft;
     chipView.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     chipView.titleLabel.numberOfLines = 0;
+    chipView.titleLabel.adjustsFontForContentSizeCategory = YES;
     chipView.titleFont = [Setting curFont];
-    chipView.titlePadding = UIEdgeInsetsMake(10, 20, 10, 20);
-    
+    chipView.titlePadding = UIEdgeInsetsMake(10, 10, 10, 14);
+    chipView.titleLabel.textColor = [UIColor darkTextColor];
+
     chipView.accessoryView = nil;
      [chipView setBorderColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [chipView setBorderWidth:2 forState:UIControlStateNormal];
     
-    if ([[self getSelected] containsObject:[NSString stringWithFormat:@"%ld", indexPath.row]]) {
+    if ([curQuestion.selected containsObject:[self getAnswers][indexPath.row]]) {
         UIImageView* checkMark = [UIImageView new];
         checkMark.image = [UIImage imageNamed:@"icon_check"];
         [chipView setBorderColor:[UIColor blueColor] forState:UIControlStateNormal];
@@ -71,11 +74,15 @@
     }
     
     if (curQuestion.isAnswerChecked) {
+        [chipView setBorderColor:[UIColor whiteColor] forState:UIControlStateNormal];
         NSString* answer = [[[self getAnswers][indexPath.row] componentsSeparatedByString:@"."][1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
            UIImageView* checkMark = [UIImageView new];
         if ([curQuestion.corrects containsString:answer]) {
             chipView.titleLabel.textColor = [UIColor greenColor];
             checkMark.image = [UIImage imageNamed:@"icon_check_done"];
+        } else if ([curQuestion.selected containsObject:[self getAnswers][indexPath.row]]){
+           
+            checkMark.image = [UIImage imageNamed:@"icon_x"];
         } else {
             checkMark = nil;
         }
@@ -90,13 +97,44 @@
     return numberOfAnswers;
 }
 
+- (CGSize) sizeOfString:(NSString*) string constrainedToWidth:(double) width {
+  //  let attributes = [NSFontAttributeName ]
+    NSAttributedString* attString = [[NSAttributedString alloc] initWithString:string];
+    
+    
+    
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef)attString);
+    return CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, 0), nil,CGSizeMake(width, DBL_MAX), nil);
+}
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(collectionView.frame.size.width, 60);
+    NSString* string = [self getAnswers][indexPath.row];
+//    UILabel * label = [[UILabel alloc] init];
+//    label.text = string;
+//
+//    label.numberOfLines = 0;
+//    CGSize maximumLabelSize = CGSizeMake(collectionView.frame.size.width - 100, 9999); //280:max width of label and 9999-max height of label.
+//
+    NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObject:[Setting curFont] forKey:NSFontAttributeName];
+    NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:string attributes:attrsDictionary];
+    // your attributed string
+    CGFloat width = collectionView.frame.size.width - 100; // whatever your desired width is
+    CGRect rect = [attrStr boundingRectWithSize:CGSizeMake(width, 10000) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
+    CGFloat height = rect.size.height + 25;
+
+    // use font information from the UILabel to calculate the size
+//    CGSize expectedLabelSize = [label sizeThatFits:maximumLabelSize];
+
+//    CGSize size = [self sizeOfString:string constrainedToWidth:collectionView.frame.size.width];
+    return CGSizeMake(collectionView.frame.size.width, MAX(60, height));
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
+    if (curQuestion.isAnswerChecked) {
+        return [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    }
     NSMutableArray* indexPaths = [NSMutableArray new];
     for (int i = 0; i < [[self getAnswers] count]; i++) {
         [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
@@ -109,7 +147,7 @@
     NSString* curIndex = [NSString stringWithFormat:@"%ld", indexPath.row];
     NSString* selectedAnswer = [self getAnswers][indexPath.row];
     if ([curQuestion.type isEqualToString:@"multiple"]) {
-        NSMutableArray* newSelected = [self getSelected];
+        NSMutableArray* newSelected = [curQuestion.selected mutableCopy];
         if ([newSelected containsObject:curIndex])
         {
             [curQuestion.selected removeObject:selectedAnswer];
@@ -118,9 +156,8 @@
             [curQuestion.selected addObject:selectedAnswer];
             [newSelected addObject:curIndex];
         }
-        selectedAnswersIdxs = [NSString stringWithFormat:@"%@", [newSelected componentsJoinedByString:@","]];
     } else { // Single
-        selectedAnswersIdxs = curIndex;
+        curQuestion.selected = [@[selectedAnswer] mutableCopy];
     }
     
     curQuestion.numberOfTry++;
@@ -128,7 +165,7 @@
     if (_answerCompletion && curQuestion.numberOfTry > ([curQuestion getCorrects].count + 1)) {
         [curQuestion checkAnswer];
         if (!curQuestion.isAnsweredCorrectly) {
-            selectedAnswersIdxs = @"";
+//            selectedAnswersIdxs = @"";
              _answerCompletion();
         }
     }
@@ -136,14 +173,19 @@
     [collectionView reloadItemsAtIndexPaths:[indexPaths copy]];
 }
 
-- (IBAction) didTapFlag: (id)sender
+- (void) updateFlag
 {
-     curQuestion.isFlagged = !curQuestion.isFlagged;
     if (curQuestion.isFlagged) {
         [_flagBtn setImage:[UIImage imageNamed:@"icon_flag_red"] forState:UIControlStateNormal];
     } else {
         [_flagBtn setImage:[UIImage imageNamed:@"icon_flag"] forState:UIControlStateNormal];
     }
+}
+
+- (IBAction) didTapFlag: (id)sender
+{
+    curQuestion.isFlagged = !curQuestion.isFlagged;
+    [self updateFlag];
 }
 
 - (void) setHeight: (NSInteger) height
@@ -158,6 +200,7 @@
     self.questionText.text = question.question;
     numberOfAnswers = [[self getAnswers] count];
     [self setHeight: 70 * numberOfAnswers];
+    [self updateFlag];
     [_layout invalidateLayout];
     [_collectionView reloadData];
 }
@@ -171,11 +214,6 @@
         [self->newArray addObject:[NSString stringWithFormat:@"%c. %@",(char)(65+idx), obj]];
     }];
     return  newArray;
-}
-
-- (NSMutableArray*) getSelected
-{
-    return [[selectedAnswersIdxs componentsSeparatedByString:@","] mutableCopy];
 }
 
 @end

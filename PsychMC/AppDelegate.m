@@ -49,13 +49,13 @@
 //                   @"    wrongQuestions     TEXT NOT NULL,"
 //                   @"    flaggedQuestions   TEXT NOT NULL,"
 //                   @"    missedQuestions    TEXT NOT NULL,"
-//                   @"    type               TEXT NOT NULL,"
-//                   @"    totalTime          REAL,"
-//                   @"    elapsedTime         REAL,"
+//                   @"    mode               TEXT NOT NULL,"
+//                   @"    totalTime           INTEGER,"
+//                   @"    elapsedTime         INTEGER,"
 //                   @"    createdAt          TEXT NOT NULL"
 //                   @");"
 //                   ]) failedAt(1);
-//            if (! [db executeUpdate:@"CREATE UNIQUE INDEX IF NOT EXISTS ID ON Question (ID);"]) failedAt(2);
+//            if (! [db executeUpdate:@"CREATE UNIQUE INDEX IF NOT EXISTS ID ON Work (ID);"]) failedAt(2);
 //
 ////            if (! [db executeUpdate:
 ////                   @"CREATE TABLE Color ("
@@ -68,15 +68,15 @@
 //
 //            *schemaVersion = 1;
 //        }
-//
-//        // If you wanted to change the schema in a later app version, you'd add something like this here:
-//        /*
-//         if (*schemaVersion < 2) {
-//         if (! [db executeUpdate:@"ALTER TABLE Person ADD COLUMN lastModified INTEGER NULL"]) failedAt(3);
-//         *schemaVersion = 2;
-//         }
-//         */
 ////
+////        // If you wanted to change the schema in a later app version, you'd add something like this here:
+////        /*
+////         if (*schemaVersion < 2) {
+////         if (! [db executeUpdate:@"ALTER TABLE Person ADD COLUMN lastModified INTEGER NULL"]) failedAt(3);
+////         *schemaVersion = 2;
+////         }
+////         */
+//////
 //        [db commit];
     }];
     

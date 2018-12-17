@@ -11,6 +11,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <CoreText/CoreText.h>
 
 @import GameplayKit;
 #import <Realm/Realm.h>
@@ -18,7 +19,7 @@
 #import "MaterialChips.h"
 #import "MaterialButtons.h"
 #import "MaterialButtons+ButtonThemer.h"
-#import "MaterialBottomNavigation.h"
+#import "MaterialDialogs.h"
 
 #import "Util.h"
 #import "Question.h"

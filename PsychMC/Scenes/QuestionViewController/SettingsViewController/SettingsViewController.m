@@ -1,33 +1,23 @@
 //
-//  TabbarViewController.m
+//  SettingsViewController.m
 //  PsychMC
 //
-//  Created by Denning IT on 2018-12-07.
+//  Created by Denning IT on 2018-12-12.
 //  Copyright © 2018 Clint. All rights reserved.
 //
 
-#import "TabbarViewController.h"
+#import "SettingsViewController.h"
 
-@interface TabbarViewController ()<UITabBarControllerDelegate>
+@interface SettingsViewController ()
 
 @end
 
-@implementation TabbarViewController
+@implementation SettingsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.delegate = self;
- 
 }
-
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-    ((TabbarViewController*)self.tabBarController).workID = 0;
-    [((UINavigationController*)viewController).viewControllers.firstObject viewWillAppear:YES];
-}
-
-
 
 /*
 #pragma mark - Navigation

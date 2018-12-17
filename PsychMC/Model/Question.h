@@ -18,7 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString* type; // multiple Or single
 @property (nonatomic, copy) NSString* corrects; // Array of indexes of correct answers, Seporator: #*#;
 @property (nonatomic, assign) int64_t isFree;
-@property (nonatomic, assign) int64_t nextID; // 1 // If nextID is -1, standalone question, else group question.
+@property (nonatomic, assign) int64_t hasPrev; // 1: if have
+@property (nonatomic, assign) int64_t nextID; // 1 if have // If nextID is -1, standalone question, else group question.
 //@property (nonatomic, copy) NSString* prevAnswer; // If prevAnswer is not nil, it must to be used on the question
 @property (nonatomic, copy) NSString* explanation; // Description about the answer
 @property (nonatomic, copy) NSString* questionImage;
@@ -38,6 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) checkAnswer;
 
 - (NSArray*) getCorrects;
+
+- (void) initData;
 @end
 
 NS_ASSUME_NONNULL_END

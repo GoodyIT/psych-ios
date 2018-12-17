@@ -14,11 +14,17 @@
 {
     self = [super init];
     
+    [self initData];
+   
+    return self;
+}
+
+- (void) initData
+{
     _selected = [NSMutableArray new];
     _numberOfTry = 0;
-     _isAnsweredCorrectly = NO;
+    _isAnsweredCorrectly = NO;
     _isAnswerChecked = NO;
-    return self;
 }
 
 - (void) checkAnswer
@@ -35,7 +41,7 @@
         }];
     }
     
-    if (countOfCorrects == [[self getCorrects] count]) {
+    if (countOfCorrects > 0 && countOfCorrects == [[self getCorrects] count]) {
         _isAnsweredCorrectly = YES;
     }
     

@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 //@property (weak, nonatomic) IBOutlet UITextView *questionTextView;
 @property (strong, nonatomic) Question* curQuestion;
+@property(nonatomic) MDCDialogTransitionController *resultView;
+
 @end
 
 @implementation QuestionViewController
@@ -27,9 +29,8 @@
 {
      [super viewWillAppear:animated];
     
-    [self.navigationItem setHidesBackButton:YES animated:NO];
     if (_isFirstQuestion != nil) {
-        
+         [self.navigationItem setHidesBackButton:YES animated:NO];
     } else {
 //        [self.navigationItem setHidesBackButton:NO animated:NO];
     }
@@ -55,9 +56,10 @@
 
 - (void) initData
 {
-    _curQuestion = [[Question allInstances] objectAtIndex:self.work.curQuestionIndex];
+    _curQuestion = [Util getQuestionAtIndex:_work.curQuestionIndex forQuestions:_work.historyIDs];
+    [_curQuestion initData];
     numberOfSections = 2;
-    self.navigationItem.title = [NSString stringWithFormat:@"%ld/%ld", self.work.curQuestionIndex + 1, self.work.numberOfQuestions];
+    self.navigationItem.title = [NSString stringWithFormat:@"%ld/%ld", _work.curQuestionIndex + 1, _work.numberOfQuestions];
 }
 
 - (void) prepareUI
@@ -109,20 +111,42 @@
 
 // Actions for navigation items
 - (void)onTapDone:(id)sender {
-    NSLog(@"Done");
+    [self saveAnswersStatus];
+    
+    NSString* message = [NSString stringWithFormat:@"Out of %ld Questions \n %ld Wrong Answers\n %ld Flagged Questions\n", _work.numberOfQuestions, [_work numberOfWrongQuestions], [_work numberOfFlaggedQuestions]];
+    MDCAlertController *alertController =
+    [MDCAlertController alertControllerWithTitle:@"Title"
+                                         message:message];
+
+    MDCAlertAction *alertAction =
+    [MDCAlertAction actionWithTitle:@"OK"
+                            handler:^(MDCAlertAction *action) {
+                                NSLog(@"OK");
+                            }];
+    
+    [alertController addAction:alertAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
-
-- (void)gotoNext:(id)sender {
-    _work.curQuestionIndex++;
+- (void) saveAnswersStatus
+{
     if (!_curQuestion.isAnsweredCorrectly) {
         [_work updateWrongQuestions:_curQuestion.ID];
-         NSLog(@"wrongly answered question %lld, all wrong answered Questions %@", _curQuestion.ID, _work.wrongQuestions);
+        NSLog(@"wrongly answered question %lld, all wrong answered Questions %@", _curQuestion.ID, _work.wrongQuestions);
     }
     if (!_curQuestion.isAnswerChecked) {
         [_work updateMissedQuestions:_curQuestion.ID];
         NSLog(@"skipped question %lld, all missed Questions %@", _curQuestion.ID, _work.missedQuestions);
     }
+//    
+    [_work updateFlaggedQuestions:_curQuestion];
+    [self.work save];
+}
+
+- (void)gotoNext:(id)sender {
+    _work.curQuestionIndex++;
+    [self saveAnswersStatus];
     [_work updateFlaggedQuestions:_curQuestion];
     [self.work save];
     [self pushQuestionViewController];
